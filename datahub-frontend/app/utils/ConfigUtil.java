@@ -45,7 +45,7 @@ public class ConfigUtil {
       Configuration.getEnvironmentVariable(GMS_SSL_PROTOCOL_VAR);
 
   public static final String DEFAULT_GHN_SSO_LOGIN_URL = Configuration.getEnvironmentVariable(GHN_SSO_LOGIN_URL, "https://sso-v2.ghn.vn/internal/login");
-  public static final String DEFAULT_GHN_SSO_REDIRECT_URL = Configuration.getEnvironmentVariable(GHN_SSO_REDIRECT_URL, "http://localhost:3000");
+  public static final String DEFAULT_GHN_SSO_REDIRECT_URL = Configuration.getEnvironmentVariable(GHN_SSO_REDIRECT_URL, "http://localhost:9002");
   public static final String DEFAULT_GHN_SSO_GEN_ACCESS_TOKEN_URL = Configuration.getEnvironmentVariable(GHN_SSO_GEN_ACCESS_TOKEN_URL, "https://online-gateway.ghn.vn/sso-v2/public-api/staff/gen-access-token");
   public static final String DEFAULT_GHN_SSO_VERIFY_ACCESS_TOKEN_URL = Configuration.getEnvironmentVariable(GHN_SSO_VERIFY_ACCESS_TOKEN_URL, "https://online-gateway.ghn.vn/sso-v2/public-api/staff/verify-access-token");
   public static final String DEFAULT_GHN_SSO_APP_KEY = Configuration.getEnvironmentVariable(GHN_SSO_APP_KEY, "62fb5476-3ed5-4431-9250-0aaa0bdda05f");
