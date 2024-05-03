@@ -1,0 +1,13 @@
+query getDataPlatform($urn: String!) {
+    dataPlatform(urn: $urn) {
+        ...platformFields
+    }
+}
+
+query getDataPlatforms($urns: [String!]!) {
+    entities(urns: $urns) {
+        ... on DataPlatform {
+            ...platformFields
+        }
+    }
+}
