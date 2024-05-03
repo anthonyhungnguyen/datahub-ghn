@@ -17,7 +17,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  DATAHUB_GMS_IMAGE: "phuchung276/datahub-gms"
+  DATAHUB_GMS_IMAGE: "phuchung276/datahub-gms-ghn"
   # DATAHUB_FRONTEND_IMAGE: "acryldata/datahub-frontend-react"
   DATAHUB_FRONTEND_IMAGE: "phuchung276/datahub-frontend-ghn"
   # DATAHUB_MAE_CONSUMER_IMAGE: "acryldata/datahub-mae-consumer"
