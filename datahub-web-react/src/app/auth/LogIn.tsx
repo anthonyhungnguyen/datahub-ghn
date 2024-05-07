@@ -181,7 +181,7 @@ export const LogIn: React.VFC<LogInProps> = () => {
                 </div>
                 <div className={styles.login_form_box}>
                     {loading && <Message type="loading" content="Logging in..." />}
-                    {/* <Form onFinish={handleLogin} layout="vertical">
+                    <Form onFinish={handleLogin} layout="vertical">
                         <Form.Item
                             name="username"
                             // eslint-disable-next-line jsx-a11y/label-has-associated-control
@@ -213,8 +213,8 @@ export const LogIn: React.VFC<LogInProps> = () => {
                                 );
                             }}
                         </Form.Item>
-                    </Form> */}
-                    {/* <SsoDivider /> */}
+                    </Form>
+                    <SsoDivider />
                     <SsoButton
                         type="primary"
                         onClick={redirectSSO}

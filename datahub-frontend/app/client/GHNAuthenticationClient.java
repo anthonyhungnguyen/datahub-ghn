@@ -128,8 +128,7 @@ public class GHNAuthenticationClient {
       try {
 
         Map<String, Integer> values = new HashMap<>();
-//        values.put("employee_id", employeeId);
-      values.put("employee_id", 245573);
+       values.put("employee_id", employeeId);
         // Convert the map to JSON string
         Gson gson = new Gson();
         String json = gson.toJson(values);
@@ -191,6 +190,7 @@ public class GHNAuthenticationClient {
         return false;
       }
   }
+
 
   public String getRedirectUri() {
       return String.format("%s?app_key=%s&redirect_uri=%s", ConfigUtil.DEFAULT_GHN_SSO_LOGIN_URL, ConfigUtil.DEFAULT_GHN_SSO_APP_KEY, ConfigUtil.DEFAULT_GHN_SSO_REDIRECT_URL);

@@ -222,12 +222,12 @@ public class AuthenticationController extends Controller {
     if (response.getCode() != 200) {
         return Results.badRequest(Json.newObject().put("message", response.getMessage()));
         } else {
-//        final String employeeId = response.getData().get("user_id");
-//        final GHNAuthenticationClient.EmployeeInfoResponse employeeInfo = _ghnAuthenticationClient.getEmployeeInfo(Integer.valueOf(employeeId));
-//        final String firstName = String.valueOf(employeeInfo.getData().get("full_name"));
-//        final String email = String.valueOf(employeeInfo.getData().get("personal_email"));
-        final String employeeId = "datahub";
-//        _ghnAuthenticationClient.provisionUser(new CorpuserUrn(employeeId), employeeId, String.format("%s@ghn.vn", employeeId));
+        final String employeeId = response.getData().get("user_id");
+        _logger.info(String.format("Employee ID: %s", employeeId));
+        final GHNAuthenticationClient.EmployeeInfoResponse employeeInfo = _ghnAuthenticationClient.getEmployeeInfo(Integer.valueOf(employeeId));
+        final String firstName = String.valueOf(employeeInfo.getData().get("full_name"));
+        final String email = String.valueOf(employeeInfo.getData().get("personal_email"));
+        _ghnAuthenticationClient.provisionUser(new CorpuserUrn(employeeId), firstName, email);
         final Urn actorUrn = new CorpuserUrn(employeeId);
         final String datahubAccessToken = _authClient.generateSessionTokenForUser(actorUrn.getId());
         return createSession(actorUrn.toString(), datahubAccessToken);

@@ -45,7 +45,7 @@ const WelcomeText = styled(Typography.Text)`
 const styles = {
     navBar: { padding: '24px' },
     searchContainer: { width: '100%', marginTop: '40px' },
-    logoImage: { width: 140 },
+    logoImage: { width: 400 },
     searchBox: { width: '50vw', minWidth: 400, margin: '40px 0px', marginBottom: '12px', maxWidth: '650px' },
     subtitle: { marginTop: '28px', color: '#FFFFFF', fontSize: 12 },
 };
@@ -254,15 +254,7 @@ export const HomePageHeader = () => {
             </Row>
             <HeaderContainer>
                 {showAcrylInfo && <AcrylDemoBanner />}
-                <Image
-                    src={
-                        appConfig.config !== DEFAULT_APP_CONFIG
-                            ? appConfig.config.visualConfig.logoUrl || themeConfig.assets.logoUrl
-                            : undefined
-                    }
-                    preview={false}
-                    style={styles.logoImage}
-                />
+                <Image src={themeConfig.assets.logoUrl} preview={false} style={styles.logoImage} />
                 {!!themeConfig.content.subtitle && (
                     <Typography.Text style={styles.subtitle}>{themeConfig.content.subtitle}</Typography.Text>
                 )}
